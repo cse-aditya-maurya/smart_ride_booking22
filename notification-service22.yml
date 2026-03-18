@@ -2,6 +2,17 @@ spring:
   application:
     name: notification-service22
 
+  datasource:
+    url: jdbc:mysql://localhost:3306/notification_db?createDatabaseIfNotExist=true
+    username: root
+    password: Adi@2552
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
   rabbitmq:
     host: localhost
     port: 5672
@@ -24,7 +35,13 @@ eureka:
 
   instance:
     prefer-ip-address: true
-    hostname: 127.0.0.1
+    hostname: localhost
 
 server:
   port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
