@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: driver-service22
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/driver_db?createDatabaseIfNotExist=true
+    username: root
+    password: Adi@2552
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: 127.0.0.1
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
