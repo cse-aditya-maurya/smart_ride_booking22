@@ -1,4 +1,70 @@
 
+# spring:
+#   application:
+#     name: gateway-service22
+
+#   cloud:
+#     gateway:
+#       routes:
+
+#         - id: driver-service
+#           uri: lb://DRIVER-SERVICE22
+#           predicates:
+#             - Path=/drivers/**
+
+#         - id: ride-service
+#           uri: lb://RIDE-SERVICE22
+#           predicates:
+#             - Path=/rides/**
+
+# server:
+#   port: 9090
+
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka
+#   instance:
+#     prefer-ip-address: true
+#     hostname: 127.0.0.1
+# management:
+#   tracing:
+#     sampling:
+#       probability: 1.0
+
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 spring:
   application:
     name: gateway-service22
