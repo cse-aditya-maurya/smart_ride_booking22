@@ -121,7 +121,4 @@ management:
       exposure:
         include: "*"
 
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
