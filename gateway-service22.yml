@@ -12,12 +12,12 @@ spring:
         - id: driver-service
           uri: lb://DRIVER-SERVICE22
           predicates:
-            - Path=/api/drivers/**
+            - Path=/drivers/**
 
         - id: ride-service
           uri: lb://RIDE-SERVICE22
           predicates:
-            - Path=/api/rides/**
+            - Path=/rides/**
 
 eureka:
   client:
