@@ -71,17 +71,19 @@ spring:
 
   cloud:
     gateway:
-      routes:
+      server:
+        webmvc:
+          routes:
 
-        - id: driver-service
-          uri: lb://DRIVER-SERVICE22
-          predicates:
-            - Path=/drivers/**
+            - id: driver-service
+              uri: lb://DRIVER-SERVICE22
+              predicates:
+                - Path=/drivers/**
 
-        - id: ride-service
-          uri: lb://RIDE-SERVICE22
-          predicates:
-            - Path=/rides/**
+            - id: ride-service
+              uri: lb://RIDE-SERVICE22
+              predicates:
+                - Path=/rides/**
 
 server:
   port: 9090
